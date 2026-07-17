@@ -1,0 +1,38 @@
+name: 🛠️ Feature Request
+description: Suggest an idea or improvement for GhostWire
+title: "🛠️ [Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: feature
+    attributes:
+      label: What is the feature?
+      description: Describe the feature in detail
+    validations:
+      required: true
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Technical Implementation
+      description: What are the technical requirements and which files do you want to change (if any)?
+    validations:
+      required: false
+  - type: checkboxes
+    id: component
+    attributes:
+      label: Component(s) affected
+      description: Select all layers this feature will likely touch.
+      options:
+        - label: Coordination server
+        - label: Clientside Agent (WireGuard / NAT / CLI)
+        - label: Desktop client (Frontend)
+        - label: Docs / infra
+        - label: Other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
